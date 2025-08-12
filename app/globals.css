@@ -69,41 +69,6 @@
   --chart-3: #794bc4;
   --chart-4: #f91880;
   --chart-5: #ff7a00;
-  --sidebar: #000000;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #1d9bf0;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2a2a2a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #333333;
-  --sidebar-ring: #1d9bf0;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -125,6 +90,8 @@
   body {
     @apply bg-background text-foreground font-sans transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+    color: #0f1419;
+    background-color: #ffffff;
   }
 }
 
@@ -515,4 +482,70 @@ section {
 main {
   background-color: var(--background) !important;
   color: var(--foreground) !important;
+}
+
+/* Fallback styles to ensure text is always visible */
+[data-theme="dark"] body {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Force text visibility for critical elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  color: inherit;
+}
+
+/* Ensure buttons are always visible */
+button {
+  color: inherit;
+}
+
+/* Force theme-aware text colors */
+.text-foreground {
+  color: var(--foreground) !important;
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.bg-background {
+  background-color: var(--background) !important;
+}
+
+.bg-card {
+  background-color: var(--card) !important;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .text-foreground {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-muted-foreground {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .text-accent {
+  color: #1d9bf0 !important;
+}
+
+[data-theme="dark"] .bg-background {
+  background-color: #000000 !important;
+}
+
+[data-theme="dark"] .bg-card {
+  background-color: #1a1a1a !important;
 }
