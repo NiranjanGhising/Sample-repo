@@ -39,7 +39,7 @@
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f7f9fa;
   --sidebar-accent-foreground: #0f1419;
-  --sidebar-border: #eff3f4;
+  --sidebar-border: #333333;
   --sidebar-ring: #1d9bf0;
 }
 
@@ -159,15 +159,15 @@ html {
 
 /* Enhanced button styles with proper contrast */
 .btn-primary {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-  border: 1px solid var(--primary);
+  background-color: #1d9bf0 !important;
+  color: #ffffff !important;
+  border: 1px solid #1d9bf0 !important;
   transition: all 0.2s ease;
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary);
+  background-color: #1d9bf0 !important;
   opacity: 0.9;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(29, 155, 240, 0.3);
@@ -175,7 +175,7 @@ html {
 
 .btn-outline {
   background-color: transparent;
-  color: var(--foreground);
+  color: inherit !important;
   border: 1px solid var(--border);
   transition: all 0.2s ease;
   font-weight: 500;
@@ -306,20 +306,20 @@ h5,
 h6 {
   font-weight: 700;
   line-height: 1.2;
-  color: var(--foreground) !important;
+  color: #0f1419 !important;
 }
 
 /* Force proper text colors for all themes */
 .text-foreground {
-  color: var(--foreground) !important;
+  color: #0f1419 !important;
 }
 
 .text-accent {
-  color: var(--accent) !important;
+  color: #1d9bf0 !important;
 }
 
 .text-muted-foreground {
-  color: var(--muted-foreground) !important;
+  color: #536471 !important;
 }
 
 .text-card-foreground {
@@ -328,11 +328,19 @@ h6 {
 
 /* Background utilities with proper opacity */
 .bg-background {
-  background-color: var(--background) !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-background {
+  background-color: #000000 !important;
 }
 
 .bg-card {
-  background-color: var(--card) !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-card {
+  background-color: #1a1a1a !important;
 }
 
 .bg-accent\/5 {
@@ -424,4 +432,87 @@ label {
 
 [data-theme="dark"] .bg-gradient-to-br {
   background: var(--background) !important;
+}
+
+/* Force maximum text visibility - Override everything */
+* {
+  color: inherit !important;
+}
+
+/* Light mode - force dark text */
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root h6,
+:root p,
+:root span,
+:root div:not(.bg-accent):not(.bg-primary) {
+  color: #0f1419 !important;
+}
+
+/* Dark mode - force white text */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] div:not(.bg-accent):not(.bg-primary) {
+  color: #ffffff !important;
+}
+
+/* Force accent colors to be visible */
+.text-accent,
+[class*="text-accent"] {
+  color: #1d9bf0 !important;
+}
+
+/* Force muted text to be visible */
+.text-muted-foreground,
+[class*="muted-foreground"] {
+  color: #536471 !important;
+}
+
+[data-theme="dark"] .text-muted-foreground,
+[data-theme="dark"] [class*="muted-foreground"] {
+  color: #a0a0a0 !important;
+}
+
+/* Force all backgrounds to be proper */
+.bg-background {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-background {
+  background-color: #000000 !important;
+}
+
+.bg-card {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-card {
+  background-color: #1a1a1a !important;
+}
+
+/* Force button text to be visible */
+button,
+.btn-primary,
+.btn-outline {
+  color: inherit !important;
+}
+
+/* Force all sections to have proper backgrounds */
+section {
+  background-color: var(--background) !important;
+}
+
+/* Force main content area */
+main {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
 }

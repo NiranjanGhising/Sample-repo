@@ -74,20 +74,36 @@ export default function ContactPage() {
   }
 
   const copyEmail = async () => {
+    const email = "ghisingniranjan@gmail.com"
     try {
-      await navigator.clipboard.writeText("ghisingniranjan@gmail.com") // updated to actual email
+      await navigator.clipboard.writeText(email)
       setEmailCopied(true)
       toast({
         title: "Email copied!",
-        description: "Email address has been copied to clipboard.",
+        description: `${email} has been copied to your clipboard.`,
       })
-      setTimeout(() => setEmailCopied(false), 2000)
+      setTimeout(() => setEmailCopied(false), 3000)
     } catch (err) {
-      toast({
-        title: "Failed to copy",
-        description: "Please copy the email manually: ghisingniranjan@gmail.com", // updated to actual email
-        variant: "destructive",
-      })
+      const textArea = document.createElement("textarea")
+      textArea.value = email
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand("copy")
+        setEmailCopied(true)
+        toast({
+          title: "Email copied!",
+          description: `${email} has been copied to your clipboard.`,
+        })
+        setTimeout(() => setEmailCopied(false), 3000)
+      } catch (fallbackErr) {
+        toast({
+          title: "Copy failed",
+          description: `Please copy manually: ${email}`,
+          variant: "destructive",
+        })
+      }
+      document.body.removeChild(textArea)
     }
   }
 
@@ -158,7 +174,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="ghisingniranjan@gmail.com" // updated to actual email
+                      placeholder="ghisingniranjan@gmail.com"
                     />
                   </div>
 
@@ -204,13 +220,18 @@ export default function ContactPage() {
                 <div>
                   <p className="text-sm text-muted-foreground mb-2">Email me directly:</p>
                   <div className="flex items-center gap-2">
-                    <code className="bg-muted px-2 py-1 rounded text-sm">ghisingniranjan@gmail.com</code>{" "}
-                    {/* updated to actual email */}
+                    <code className="bg-muted px-2 py-1 rounded text-sm">ghisingniranjan@gmail.com</code>
                     <Button variant="ghost" size="sm" onClick={copyEmail}>
-                      {emailCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                      {emailCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
                       <span className="sr-only">Copy email</span>
                     </Button>
                   </div>
+                  <a
+                    href="mailto:ghisingniranjan@gmail.com"
+                    className="text-sm text-accent hover:underline mt-2 inline-block"
+                  >
+                    Or click here to open in your email app
+                  </a>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   I typically respond within 24 hours during business days.

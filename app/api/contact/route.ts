@@ -16,23 +16,45 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid email format" }, { status: 400 })
     }
 
-    // Log the contact form submission (in production, you'd send an email or save to database)
-    console.log("Contact form submission:", {
+    const contactData = {
       name,
       email,
       message,
       timestamp: new Date().toISOString(),
-    })
+      userAgent: request.headers.get("user-agent"),
+    }
 
-    // In a real implementation, you would:
-    // 1. Send an email notification to yourself
-    // 2. Send a confirmation email to the user
-    // 3. Save the message to a database
-    // 4. Integrate with a service like Resend, SendGrid, or Nodemailer
+    console.log("=== NEW CONTACT FORM SUBMISSION ===")
+    console.log(`From: ${name} (${email})`)
+    console.log(`Time: ${new Date().toLocaleString()}`)
+    console.log(`Message: ${message}`)
+    console.log("=====================================")
 
-    return NextResponse.json({ message: "Message sent successfully" }, { status: 200 })
+    // In production, you would integrate with:
+    // - Resend: https://resend.com
+    // - SendGrid: https://sendgrid.com
+    // - Nodemailer with Gmail/SMTP
+
+    // Simulate email sending delay
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    return NextResponse.json(
+      {
+        message: "Message received successfully! I'll get back to you within 24 hours.",
+        data: {
+          name,
+          timestamp: contactData.timestamp,
+        },
+      },
+      { status: 200 },
+    )
   } catch (error) {
     console.error("Contact form error:", error)
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: "Failed to send message. Please try emailing me directly at ghisingniranjan@gmail.com",
+      },
+      { status: 500 },
+    )
   }
 }
