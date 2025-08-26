@@ -41,9 +41,9 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile
 
-      - name: Export site
+      - name: Build site
         run: |
-          pnpm run export
+          pnpm run build
           ls -la out
 
       - name: Add .nojekyll

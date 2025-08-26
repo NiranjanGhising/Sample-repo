@@ -25,6 +25,9 @@ export default {
         destructive: 'var(--destructive)',
         'destructive-foreground': 'var(--destructive-foreground)',
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
