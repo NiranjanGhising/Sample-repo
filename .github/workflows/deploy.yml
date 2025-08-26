@@ -32,17 +32,10 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile
 
-      - name: Build (Next 15) + Fallback Export (Next 14)
+      - name: Build (static export)
         run: |
           pnpm run build
-          # If out/ not produced (Next 14 style), run legacy export
-          if [ ! -d "out" ]; then
-            echo "out/ not found after build – running next export (likely Next 14)";
-            npx next export;
-          else
-            echo "out/ directory present after build";
-          fi
-          ls -la out || (echo "out directory missing" && exit 1)
+          ls -la out || (echo "out directory missing after build" && exit 1)
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
