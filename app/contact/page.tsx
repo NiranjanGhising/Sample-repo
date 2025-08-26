@@ -32,25 +32,29 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Honeypot check (spam bots)
     if (formData.honeypot) return
+
     setIsSubmitting(true)
 
     try {
-      // Static export: no backend. Use mailto fallback.
-      const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`)
+      // Static export: no API endpoint. Use mailto fallback.
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`)
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-      // Open user's mail client
+      // Open user's email client
       window.location.href = `mailto:ghisingniranjan@gmail.com?subject=${subject}&body=${body}`
 
       toast({
-        title: "Compose your email",
-        description: "Your email client should open. If not, copy the address shown on the right.",
+        title: "Opening email client...",
+        description: "If it didn't open, copy the email and send manually.",
       })
+
       setFormData({ name: "", email: "", message: "", honeypot: "" })
     } catch (error) {
       toast({
-        title: "Unable to open email app",
-        description: "Please email me directly at ghisingniranjan@gmail.com",
+        title: "Could not open email client",
+        description: "Please copy the email address and send manually.",
         variant: "destructive",
       })
     } finally {
