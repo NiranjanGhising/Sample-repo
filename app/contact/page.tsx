@@ -247,8 +247,8 @@ export default function ContactPage() {
               <CardContent className="p-4">
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Current Status</h3>
-                  <div className="flex items-center gap-2"></div>
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-accent rounded-full" />
                     <span className="text-sm text-muted-foreground">Open to internships and part-time roles</span>
                   </div>
                   <p className="text-xs text-muted-foreground">Available for projects starting January 2025</p>
