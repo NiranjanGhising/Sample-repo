@@ -11,25 +11,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Niranjan Ghising — Data Analyst Student",
-  description:
-    "Data Analyst Student from Kathmandu, Nepal turning messy data into clear decisions. Skilled in Python, SQL, and data visualization. Open to internships and part-time roles.",
+  title: "Your Name — Data Analyst Student",
+  description: "Data Analyst Student turning messy data into clear decisions. Open to internships and part-time roles.",
   generator: "v0.dev",
-  keywords: [
-    "data analyst",
-    "data science",
-    "python",
-    "sql",
-    "numpy",
-    "pandas",
-    "matplotlib",
-    "excel",
-    "niranjan ghising",
-  ],
-  authors: [{ name: "Niranjan Ghising" }],
+  keywords: ["data analyst", "data science", "python", "sql", "tableau", "power bi"],
+  authors: [{ name: "Your Name" }],
   openGraph: {
-    title: "Niranjan Ghising — Data Analyst Student",
-    description: "Data Analyst Student from Kathmandu, Nepal turning messy data into clear decisions.",
+    title: "Your Name — Data Analyst Student",
+    description: "Data Analyst Student turning messy data into clear decisions.",
     type: "website",
   },
 }
