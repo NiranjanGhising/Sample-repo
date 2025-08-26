@@ -21,6 +21,7 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [emailCopied, setEmailCopied] = useState(false)
+  const [statusMsg, setStatusMsg] = useState<string | null>(null)
   const { toast } = useToast()
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,26 +38,38 @@ export default function ContactPage() {
     if (formData.honeypot) return
 
     setIsSubmitting(true)
+    setStatusMsg(null)
 
     try {
-      // Static export: no API endpoint. Use mailto fallback.
-      const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`)
-      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-      // Open user's email client
-      window.location.href = `mailto:ghisingniranjan@gmail.com?subject=${subject}&body=${body}`
-
-      toast({
-        title: "Opening email client...",
-        description: "If it didn't open, copy the email and send manually.",
+      const res = await fetch("https://formspree.io/f/mwpqygrq", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: (() => {
+          const fd = new FormData()
+          fd.append("email", formData.email)
+          fd.append("message", `Name: ${formData.name}\n${formData.message}`)
+          return fd
+        })(),
       })
 
-      setFormData({ name: "", email: "", message: "", honeypot: "" })
-    } catch (error) {
-      toast({
-        title: "Could not open email client",
-        description: "Please copy the email address and send manually.",
-        variant: "destructive",
-      })
+      if (res.ok) {
+        toast({ title: "Sent", description: "Thanks for your submission!" })
+        setStatusMsg("Thanks for your submission!")
+        setFormData({ name: "", email: "", message: "", honeypot: "" })
+      } else {
+        let msg = "Submission failed"
+        try {
+          const data = await res.json()
+          if (data?.errors) {
+            msg = data.errors.map((e: any) => e.message).join(", ")
+          }
+        } catch {}
+        setStatusMsg(msg)
+        toast({ title: "Error", description: msg, variant: "destructive" })
+      }
+    } catch (err) {
+      setStatusMsg("Network error")
+      toast({ title: "Network error", description: "Try again later", variant: "destructive" })
     } finally {
       setIsSubmitting(false)
     }
@@ -123,7 +136,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-2">Send a Message</h2>
               <p className="text-muted-foreground">
-                This static site uses a mailto link. Submitting will open your email app with a pre-filled message.
+                This static site uses Formspree for submissions. Your message will be sent directly to my email.
               </p>
             </div>
 
@@ -182,14 +195,15 @@ export default function ContactPage() {
 
                   <Button type="submit" disabled={isSubmitting} className="w-full">
                     {isSubmitting ? (
-                      "Preparing..."
+                      "Submitting..."
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
-                        Open Email App
+                        Send Message
                       </>
                     )}
                   </Button>
+                  {statusMsg && <p className="text-sm text-muted-foreground mt-2">{statusMsg}</p>}
                 </form>
               </CardContent>
             </Card>
@@ -233,7 +247,7 @@ export default function ContactPage() {
               <CardContent className="p-4">
                 <div className="space-y-2">
                   <h3 className="font-semibold text-foreground">Current Status</h3>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2"></div>
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-sm text-muted-foreground">Open to internships and part-time roles</span>
                   </div>
