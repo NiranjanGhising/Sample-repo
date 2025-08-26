@@ -3,10 +3,7 @@
 @tailwind utilities;
 @import "tw-animate-css";
 
-/* Clean design system matching X.com and the example dark mode */
-@theme inline {
-  --font-sans: var(--font-inter);
-}
+/* Removed @theme inline (Tailwind v4 syntax) */
 
 :root {
   /* Light Mode - X.com style with high contrast */
@@ -87,7 +84,13 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    /* Removed outline-ring/50 (invalid in Tailwind v3). */
+    @apply border-border;
+  }
+  /* Optional accessible focus style */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
   body {
     @apply bg-background text-foreground font-sans transition-colors duration-300;
