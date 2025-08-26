@@ -32,40 +32,25 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    // Honeypot check
-    if (formData.honeypot) {
-      return // Likely spam
-    }
-
+    if (formData.honeypot) return
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }),
-      })
+      // Static export: no backend. Use mailto fallback.
+      const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`)
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
+      // Open user's mail client
+      window.location.href = `mailto:ghisingniranjan@gmail.com?subject=${subject}&body=${body}`
 
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        })
-        setFormData({ name: "", email: "", message: "", honeypot: "" })
-      } else {
-        throw new Error("Failed to send message")
-      }
+      toast({
+        title: "Compose your email",
+        description: "Your email client should open. If not, copy the address shown on the right.",
+      })
+      setFormData({ name: "", email: "", message: "", honeypot: "" })
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or email me directly.",
+        title: "Unable to open email app",
+        description: "Please email me directly at ghisingniranjan@gmail.com",
         variant: "destructive",
       })
     } finally {
@@ -134,7 +119,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-2">Send a Message</h2>
               <p className="text-muted-foreground">
-                Have a project in mind or want to discuss data analysis opportunities? I'd love to hear from you.
+                This static site uses a mailto link. Submitting will open your email app with a pre-filled message.
               </p>
             </div>
 
@@ -174,7 +159,7 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="ghisingniranjan@gmail.com"
+                      placeholder="you@example.com"
                     />
                   </div>
 
@@ -193,11 +178,11 @@ export default function ContactPage() {
 
                   <Button type="submit" disabled={isSubmitting} className="w-full">
                     {isSubmitting ? (
-                      "Sending..."
+                      "Preparing..."
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
-                        Send Message
+                        Open Email App
                       </>
                     )}
                   </Button>

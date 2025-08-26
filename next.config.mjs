@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/Sample-repo',
+  assetPrefix: '/Sample-repo/',
   eslint: {
     ignoreDuringBuilds: true,
   },
