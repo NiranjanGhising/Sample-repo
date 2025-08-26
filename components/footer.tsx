@@ -88,7 +88,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Niranjan Ghising. Built with Next.js and deployed on Vercel.
+            © {currentYear} Niranjan Ghising. Built with Next.js .
           </p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <span>Open to opportunities</span>

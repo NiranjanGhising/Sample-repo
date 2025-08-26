@@ -29,7 +29,7 @@ export function ProofStrip() {
           {/* Quick stats preview */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto pt-8">
             <div className="text-center space-y-1">
-              <div className="text-2xl font-bold text-accent">10+</div>
+              <div className="text-2xl font-bold text-accent">2+</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
             <div className="text-center space-y-1">
@@ -37,7 +37,7 @@ export function ProofStrip() {
               <div className="text-sm text-muted-foreground">Certifications</div>
             </div>
             <div className="text-center space-y-1">
-              <div className="text-2xl font-bold text-accent">20+</div>
+              <div className="text-2xl font-bold text-accent">13+</div>
               <div className="text-sm text-muted-foreground">Datasets Analyzed</div>
             </div>
           </div>

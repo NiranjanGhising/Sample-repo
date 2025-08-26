@@ -52,7 +52,7 @@ export function Hero() {
               <div className="text-sm text-muted-foreground">Primary tool</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-foreground">2024</div>
+              <div className="text-2xl font-bold text-foreground">2027</div>
               <div className="text-sm text-muted-foreground">Graduate</div>
             </div>
           </div>
