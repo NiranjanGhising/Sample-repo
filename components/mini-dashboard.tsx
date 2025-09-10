@@ -77,8 +77,10 @@ export function MiniDashboard() {
           <Card className="border-border">
             <CardHeader className="space-y-4">
               <div>
-                <CardTitle className="text-xl">Regional Sales Performance</CardTitle>
-                <CardDescription>Sample dataset showing sales trends across regions and time periods</CardDescription>
+                <CardTitle className="text-xl text-foreground">Regional Sales Performance</CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  Sample dataset showing sales trends across regions and time periods
+                </CardDescription>
               </div>
 
               {/* Controls */}
@@ -111,7 +113,7 @@ export function MiniDashboard() {
                           checked={selectedRegions.includes(region)}
                           onCheckedChange={() => handleRegionToggle(region)}
                         />
-                        <label htmlFor={region} className="text-sm font-medium cursor-pointer">
+                        <label htmlFor={region} className="text-sm font-medium cursor-pointer text-foreground">
                           {region}
                         </label>
                       </div>
@@ -149,8 +151,19 @@ export function MiniDashboard() {
                   {chartType === "line" ? (
                     <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                      <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" />
-                      <YAxis stroke="hsl(var(--muted-foreground))" />
+                      <XAxis
+                        dataKey="name"
+                        stroke="hsl(var(--foreground))"
+                        tick={{ fill: 'hsl(var(--foreground))' }}
+                        tickLine={{ stroke: 'hsl(var(--foreground))' }}
+                        axisLine={{ stroke: 'hsl(var(--foreground))' }}
+                      />
+                      <YAxis
+                        stroke="hsl(var(--foreground))"
+                        tick={{ fill: 'hsl(var(--foreground))' }}
+                        tickLine={{ stroke: 'hsl(var(--foreground))' }}
+                        axisLine={{ stroke: 'hsl(var(--foreground))' }}
+                      />
                       <Tooltip
                         contentStyle={{
                           backgroundColor: "hsl(var(--background))",
@@ -158,25 +171,37 @@ export function MiniDashboard() {
                           borderRadius: "6px",
                         }}
                         labelStyle={{ color: "hsl(var(--foreground))" }}
+                        itemStyle={{ color: "hsl(var(--foreground))" }}
                       />
-                      <Legend />
+                      <Legend wrapperStyle={{ color: 'hsl(var(--foreground))' }} />
                       {selectedRegions.map((region, index) => (
                         <Line
                           key={region}
                           type="monotone"
                           dataKey={region}
-                          stroke={`hsl(var(--accent))`}
+                          stroke={`hsl(var(--foreground))`}
                           strokeWidth={2}
                           strokeOpacity={1 - index * 0.2}
-                          dot={{ fill: `hsl(var(--accent))`, strokeWidth: 2, r: 4 }}
+                          dot={{ fill: `hsl(var(--foreground))`, strokeWidth: 2, r: 4 }}
                         />
                       ))}
                     </LineChart>
                   ) : (
                     <BarChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                      <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" />
-                      <YAxis stroke="hsl(var(--muted-foreground))" />
+                      <XAxis
+                        dataKey="name"
+                        stroke="hsl(var(--foreground))"
+                        tick={{ fill: 'hsl(var(--foreground))' }}
+                        tickLine={{ stroke: 'hsl(var(--foreground))' }}
+                        axisLine={{ stroke: 'hsl(var(--foreground))' }}
+                      />
+                      <YAxis
+                        stroke="hsl(var(--foreground))"
+                        tick={{ fill: 'hsl(var(--foreground))' }}
+                        tickLine={{ stroke: 'hsl(var(--foreground))' }}
+                        axisLine={{ stroke: 'hsl(var(--foreground))' }}
+                      />
                       <Tooltip
                         contentStyle={{
                           backgroundColor: "hsl(var(--background))",
@@ -184,10 +209,11 @@ export function MiniDashboard() {
                           borderRadius: "6px",
                         }}
                         labelStyle={{ color: "hsl(var(--foreground))" }}
+                        itemStyle={{ color: "hsl(var(--foreground))" }}
                       />
-                      <Legend />
+                      <Legend wrapperStyle={{ color: 'hsl(var(--foreground))' }} />
                       {selectedRegions.map((region, index) => (
-                        <Bar key={region} dataKey={region} fill={`hsl(var(--accent))`} fillOpacity={1 - index * 0.2} />
+                        <Bar key={region} dataKey={region} fill={`hsl(var(--foreground))`} fillOpacity={1 - index * 0.2} />
                       ))}
                     </BarChart>
                   )}

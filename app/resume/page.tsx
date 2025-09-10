@@ -4,11 +4,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Download, Mail, Phone, MapPin, Globe, Github, Linkedin } from "lucide-react"
+import { ArrowLeft, Download, Mail, Phone, MapPin, Globe, Github, Linkedin, Printer } from "lucide-react"
 
 export default function ResumePage() {
-  const handleDownloadPDF = () => {
-    // In a real implementation, this would generate or link to a PDF
+  const handlePrint = () => {
     window.print()
   }
 
@@ -30,10 +29,18 @@ export default function ResumePage() {
                 <p className="text-muted-foreground">ATS-friendly format</p>
               </div>
             </div>
-            <Button onClick={handleDownloadPDF}>
-              <Download className="mr-2 h-4 w-4" />
-              Download PDF
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button asChild>
+                <a href="/resume.pdf" download="NiranjanGhising_Internship_Resume.pdf">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </a>
+              </Button>
+              <Button variant="secondary" onClick={handlePrint}>
+                <Printer className="mr-2 h-4 w-4" />
+                Print
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -50,11 +57,11 @@ export default function ResumePage() {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground print:gap-2">
               <div className="flex items-center gap-1">
                 <Mail className="h-4 w-4" />
-                ghisingniranjan@gmail.com
+                <a className="hover:underline" href="mailto:ghisingniranjan@gmail.com">ghisingniranjan@gmail.com</a>
               </div>
               <div className="flex items-center gap-1">
                 <Phone className="h-4 w-4" />
-                +977 9817042947
+                <a className="hover:underline" href="tel:+9779817042947">+977 9817042947</a>
               </div>
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
@@ -62,18 +69,18 @@ export default function ResumePage() {
               </div>
               <div className="flex items-center gap-1">
                 <Globe className="h-4 w-4" />
-                www.niranjanghising.com.np
+                <a className="hover:underline" href="https://www.niranjanghising.com.np" target="_blank" rel="noopener noreferrer">www.niranjanghising.com.np</a>
               </div>
             </div>
 
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Github className="h-4 w-4" />
-                github.com/NiranjanGhising
+                <a className="hover:underline" href="https://github.com/NiranjanGhising" target="_blank" rel="noopener noreferrer">github.com/NiranjanGhising</a>
               </div>
               <div className="flex items-center gap-1">
                 <Linkedin className="h-4 w-4" />
-                linkedin.com/in/niranjan-ghising
+                <a className="hover:underline" href="https://www.linkedin.com/in/niranjan-ghising" target="_blank" rel="noopener noreferrer">linkedin.com/in/niranjan-ghising</a>
               </div>
             </div>
           </div>
