@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export function CTASection() {
   return (
-    <section className="py-20 bg-neutral-900 text-white">
+    <section className="py-20 bg-neutral-900 dark:bg-neutral-950">
       <div className="max-w-4xl mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -17,7 +17,7 @@ export function Footer() {
               <p className="text-sm text-muted-foreground">Data Science Enthusiast</p>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Turning data into insights. Passionate about machine learning, statistical analysis, and visualization.
+              Turning data into insights. Passionate about AI, statistical analysis, and visualization.
             </p>
           </div>
 

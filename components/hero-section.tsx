@@ -7,19 +7,36 @@ export function HeroSection() {
   return (
     <section className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden">
       {/* Main Hero Content */}
-      <div className="relative w-full max-w-5xl mx-auto">
-        {/* Big scattered "NIRANJAN" typography like reference "PORTFOLIO" */}
+      <div className="relative w-full max-w-6xl mx-auto">
+        {/* Avatar - Centered and Large, positioned above text */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
+          className="flex justify-center mb-[-80px] md:mb-[-120px] lg:mb-[-160px] relative z-20"
+        >
+          <div className="w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[26rem] lg:w-96 lg:h-[32rem] relative">
+            <Image
+              src="/me_Animated.png"
+              alt="Niranjan Ghising - Illustrated Avatar"
+              fill
+              className="object-contain object-bottom drop-shadow-2xl"
+              priority
+            />
+          </div>
+        </motion.div>
+
+        {/* Big scattered "NIRANJAN" typography */}
         <div className="relative flex items-center justify-center">
-          {/* The scattered letters */}
           <div className="relative">
-            {/* Year badge '25 */}
+            {/* Year badge '18 */}
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.4 }}
-              className="absolute -top-4 right-0 md:right-8 text-3xl md:text-4xl font-display font-bold text-foreground z-20"
+              className="absolute -top-4 right-0 md:right-8 text-3xl md:text-4xl font-display font-bold text-foreground z-30"
             >
-              '25
+              '18
             </motion.span>
 
             {/* Main NIRANJAN text - scattered/playful like reference */}
@@ -75,7 +92,7 @@ export function HeroSection() {
                   N
                 </motion.span>
                 
-                {/* J - with illustrated avatar overlapping */}
+                {/* J */}
                 <motion.span
                   initial={{ y: -25, opacity: 0, rotate: -12 }}
                   animate={{ y: 0, opacity: 1, rotate: 6 }}
@@ -106,24 +123,6 @@ export function HeroSection() {
                 </motion.span>
               </div>
             </h1>
-            
-            {/* Avatar illustration overlapping the text - centered and larger */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 50 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-              className="absolute left-1/2 -translate-x-1/2 -top-20 md:-top-32 lg:-top-40 z-10"
-            >
-              <div className="w-48 h-60 sm:w-56 sm:h-72 md:w-72 md:h-96 lg:w-80 lg:h-[28rem] relative">
-                <Image
-                  src="/me_Animated.png"
-                  alt="Niranjan Ghising - Illustrated Avatar"
-                  fill
-                  className="object-contain object-bottom drop-shadow-2xl"
-                  priority
-                />
-              </div>
-            </motion.div>
           </div>
         </div>
         
@@ -139,26 +138,6 @@ export function HeroSection() {
           </h2>
         </motion.div>
       </div>
-      
-      {/* Scroll indicator */}
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform"
-      >
-        <div className="flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-sm">Scroll</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center pt-2"
-          >
-            <div className="w-1.5 h-1.5 bg-muted-foreground rounded-full" />
-          </motion.div>
-        </div>
-      </motion.a>
     </section>
   )
 }
