@@ -2,6 +2,38 @@ import type { Project } from "@/lib/types"
 
 export const projects: Project[] = [
   {
+    id: "customer-satisfaction-analysis",
+    title: "Customer Satisfaction Analysis",
+    summary:
+      "Analyzed customer rating behavior using R to identify the strongest factors influencing satisfaction scores across delivery types and user segments.",
+    impact: "Identified key drivers of customer satisfaction for business strategy",
+    tags: ["Data Analysis", "R", "Visualization"],
+    tools: ["R", "ggplot2", "dplyr"],
+    domain: "Business Analytics",
+    githubUrl: "https://github.com/NiranjanGhising/Customer-Satisfaction-Analysis",
+    featured: true,
+    problem:
+      "Understanding which factors most strongly influence customer satisfaction scores to help businesses prioritize improvements.",
+    approach:
+      "Used exploratory data analysis techniques in R to evaluate rating patterns across delivery types and user segments.",
+    process: [
+      "Collected and preprocessed customer rating data",
+      "Performed exploratory analysis on delivery type correlations",
+      "Segmented analysis by user types (premium vs standard)",
+      "Created visualizations to highlight key patterns",
+      "Generated actionable insights for business decisions",
+    ],
+    results: {
+      before: "No clear understanding of satisfaction drivers",
+      after: "Identified instant delivery and premium users as key satisfaction factors",
+      metrics: [
+        { label: "Key Finding", value: "Instant delivery = higher ratings" },
+        { label: "Segment Insight", value: "Premium users rate higher" },
+        { label: "Language", value: "R" },
+      ],
+    },
+  },
+  {
     id: "model-context-protocol-mcp",
     title: "MCP Server & Client",
     summary:
@@ -34,6 +66,38 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "etl-elt-pipeline",
+    title: "ETL-ELT Pipeline",
+    summary:
+      "Built an end-to-end data pipeline from source extraction via APIs to transformed, end-user-ready outputs.",
+    impact: "Reproducible workflow for data ingestion and transformation",
+    tags: ["Data Engineering", "ETL", "Python"],
+    tools: ["Python", "APIs", "Data Transformation"],
+    domain: "Data Engineering",
+    githubUrl: "https://github.com/NiranjanGhising/ETL-ELT-Pipeline",
+    featured: true,
+    problem:
+      "Need for a complete data pipeline that handles extraction, transformation, and delivery in a reproducible manner.",
+    approach:
+      "Connected ingestion, transformation, and delivery steps into one reproducible workflow, applying data cleaning and transformation logic.",
+    process: [
+      "Extracted data via API calls from various sources",
+      "Transformed raw records into structured datasets",
+      "Applied data cleaning logic for consistency",
+      "Prepared curated outputs for downstream use",
+      "Built reproducible workflow for ETL/ELT operations",
+    ],
+    results: {
+      before: "Manual, disconnected data processing steps",
+      after: "Automated end-to-end pipeline with clean outputs",
+      metrics: [
+        { label: "Pipeline Type", value: "ETL/ELT" },
+        { label: "Data Source", value: "API-based" },
+        { label: "Output", value: "Analysis-ready" },
+      ],
+    },
+  },
+  {
     id: "ai-data-science-news-bot",
     title: "AI & Data Science News Bot",
     summary:
@@ -43,7 +107,7 @@ export const projects: Project[] = [
     tools: ["Python", "Telegram API", "GitHub Actions"],
     domain: "Automation",
     githubUrl: "https://github.com/NiranjanGhising/AI-Data_Science_News_bot",
-    featured: true,
+    featured: false,
     problem:
       "Keeping up with the latest AI and data science research across multiple sources is time-consuming and overwhelming.",
     approach:
@@ -66,6 +130,38 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "vr-fitness-data-analysis",
+    title: "VR Fitness Game Data Analysis",
+    summary:
+      "Cleaned and analyzed a VR fitness game dataset to understand gameplay engagement, repeat-play patterns, and dataset quality issues.",
+    impact: "Revealed engagement trends and player behavior insights",
+    tags: ["Data Cleaning", "Python", "Analysis"],
+    tools: ["Python", "Jupyter Notebook", "Pandas"],
+    domain: "Gaming Analytics",
+    githubUrl: "https://github.com/NiranjanGhising/VR-Fitness-Analysis",
+    featured: false,
+    problem:
+      "Understanding player engagement patterns in VR fitness games required cleaning messy data and analyzing gameplay metrics.",
+    approach:
+      "Performed notebook-based data cleaning and preprocessing to improve consistency before analyzing play hours and replay patterns.",
+    process: [
+      "Imported and explored raw VR fitness dataset",
+      "Performed data cleaning and preprocessing",
+      "Analyzed games with higher accumulated play hours",
+      "Identified titles with higher replay rates",
+      "Summarized player-behavior insights",
+    ],
+    results: {
+      before: "Messy dataset with unclear engagement patterns",
+      after: "Clean data with actionable engagement insights",
+      metrics: [
+        { label: "Analysis Type", value: "Engagement Trends" },
+        { label: "Tool", value: "Jupyter Notebook" },
+        { label: "Focus", value: "Replay Patterns" },
+      ],
+    },
+  },
+  {
     id: "data-cleaning-sql",
     title: "SQL Data Cleaning Pipeline",
     summary:
@@ -75,7 +171,7 @@ export const projects: Project[] = [
     tools: ["SQL", "Jupyter Notebook", "Python"],
     domain: "Data Engineering",
     githubUrl: "https://github.com/NiranjanGhising/Data-Cleaning",
-    featured: true,
+    featured: false,
     problem:
       "Raw datasets often contain inconsistencies, missing values, and formatting issues that need systematic cleaning.",
     approach:
@@ -126,70 +222,6 @@ export const projects: Project[] = [
         { label: "Data Points Analyzed", value: "1000+" },
         { label: "Key Insights Generated", value: "8" },
         { label: "Visualization Charts", value: "12" },
-      ],
-    },
-  },
-  {
-    id: "netflix-movie-analysis",
-    title: "Netflix 1990s Movie Analysis",
-    summary:
-      "Analyzed Netflix movie dataset in Python, exploring trends in durations and release years with histogram visualizations.",
-    impact: "Revealed key trends in 1990s movie duration patterns",
-    tags: ["Data Analysis", "Entertainment Analytics", "Python"],
-    tools: ["Python", "Matplotlib", "Pandas"],
-    domain: "Entertainment",
-    githubUrl: "https://github.com/NiranjanGhising/Netflix_1900sMovie_Analysis",
-    featured: false,
-    problem:
-      "Understanding movie duration trends and patterns in Netflix's 1990s catalog required systematic analysis and visualization.",
-    approach:
-      "Conducted comprehensive analysis of Netflix movie dataset focusing on 1990s content, using Python for data manipulation and Matplotlib for visualization.",
-    process: [
-      "Dataset acquisition and initial exploration",
-      "Data filtering for 1990s movies",
-      "Duration trend analysis across release years",
-      "Histogram creation for duration distribution",
-      "Pattern identification and insight documentation",
-    ],
-    results: {
-      before: "Unstructured movie dataset with no trend analysis",
-      after: "Clear visualization of movie duration patterns and trends",
-      metrics: [
-        { label: "Movies Analyzed", value: "500+" },
-        { label: "Years Covered", value: "1990-1999" },
-        { label: "Visualizations Created", value: "5" },
-      ],
-    },
-  },
-  {
-    id: "python-intermediate-projects",
-    title: "Python Intermediate Projects",
-    summary:
-      "Collection of intermediate Python projects including games built using OOP concepts like Tic Tac Toe and Rock Paper Scissors.",
-    impact: "Demonstrates OOP principles through practical applications",
-    tags: ["Python", "OOP", "Game Development"],
-    tools: ["Python", "OOP"],
-    domain: "Software Development",
-    githubUrl: "https://github.com/NiranjanGhising/Python-Intermediate-Projects",
-    featured: false,
-    problem:
-      "Needed to practice and demonstrate intermediate Python concepts including Object-Oriented Programming.",
-    approach:
-      "Built practical game applications using OOP principles to solidify understanding of classes, objects, and inheritance.",
-    process: [
-      "Designed class structures for game logic",
-      "Implemented Tic Tac Toe with OOP",
-      "Created Rock Paper Scissors game",
-      "Added QR code generation project",
-      "Documented code with clear comments",
-    ],
-    results: {
-      before: "Basic Python knowledge",
-      after: "Working OOP-based game applications",
-      metrics: [
-        { label: "Projects", value: "3+" },
-        { label: "Concepts", value: "OOP" },
-        { label: "Language", value: "Python" },
       ],
     },
   },

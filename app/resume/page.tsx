@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Download, Mail, Phone, MapPin, Globe, Github, Linkedin, Printer } from "lucide-react"
+import { ArrowLeft, Download, Mail, Phone, MapPin, Github, Linkedin, Printer } from "lucide-react"
 
 export default function ResumePage() {
   const handlePrint = () => {
@@ -31,7 +31,7 @@ export default function ResumePage() {
             </div>
             <div className="flex items-center gap-2">
               <Button asChild>
-                <a href="/resume.pdf" download="NiranjanGhising_Internship_Resume.pdf">
+                <a href="/Niranjan_Ghising's_Resume.pdf" download="Niranjan_Ghising_Resume.pdf">
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF
                 </a>
@@ -50,53 +50,35 @@ export default function ResumePage() {
         <div className="bg-background space-y-8 print:space-y-6">
           {/* Header section */}
           <div className="text-center space-y-4 print:space-y-2">
-            <h1 className="text-4xl font-bold text-foreground print:text-3xl">NIRANJAN GHISING</h1>
-            <p className="text-xl text-accent font-medium">Data Analyst Student</p>
+            <h1 className="text-4xl font-bold text-foreground print:text-3xl">Niranjan Ghising</h1>
 
             {/* Contact info */}
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground print:gap-2">
               <div className="flex items-center gap-1">
-                <Mail className="h-4 w-4" />
-                <a className="hover:underline" href="mailto:ghisingniranjan@gmail.com">ghisingniranjan@gmail.com</a>
+                <MapPin className="h-4 w-4" />
+                Kathmandu, Nepal
               </div>
               <div className="flex items-center gap-1">
                 <Phone className="h-4 w-4" />
                 <a className="hover:underline" href="tel:+9779817042947">+977 9817042947</a>
               </div>
               <div className="flex items-center gap-1">
-                <MapPin className="h-4 w-4" />
-                Kathmandu, Nepal
-              </div>
-              <div className="flex items-center gap-1">
-                <Globe className="h-4 w-4" />
-                <a className="hover:underline" href="https://www.niranjanghising.com.np" target="_blank" rel="noopener noreferrer">www.niranjanghising.com.np</a>
+                <Mail className="h-4 w-4" />
+                <a className="hover:underline" href="mailto:ghisingniranjan@gmail.com">ghisingniranjan@gmail.com</a>
               </div>
             </div>
 
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
+                <Linkedin className="h-4 w-4" />
+                <a className="hover:underline" href="https://www.linkedin.com/in/niranjan-ghising-04500424a" target="_blank" rel="noopener noreferrer">linkedin.com/in/niranjan-ghising-04500424a</a>
+              </div>
+              <div className="flex items-center gap-1">
                 <Github className="h-4 w-4" />
                 <a className="hover:underline" href="https://github.com/NiranjanGhising" target="_blank" rel="noopener noreferrer">github.com/NiranjanGhising</a>
               </div>
-              <div className="flex items-center gap-1">
-                <Linkedin className="h-4 w-4" />
-                <a className="hover:underline" href="https://www.linkedin.com/in/niranjan-ghising" target="_blank" rel="noopener noreferrer">linkedin.com/in/niranjan-ghising</a>
-              </div>
             </div>
           </div>
-
-          <Separator className="print:border-gray-300" />
-
-          {/* Professional Summary */}
-          <section className="space-y-3">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">SUMMARY</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Disciplined and detail-oriented, skilled in Python programming and data handling through practical project
-              work. Adept at transforming complex information into clear, actionable results and creating resources to
-              support others. Collaborative problem-solver with hands-on experience using NumPy, Pandas, and Matplotlib;
-              eager to contribute and develop further through an internship.
-            </p>
-          </section>
 
           <Separator className="print:border-gray-300" />
 
@@ -107,46 +89,16 @@ export default function ResumePage() {
               <div>
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="font-semibold text-foreground">B.Sc. (Hons.) Information Technology</h3>
-                    <p className="text-muted-foreground">Asia Pacific University of Technology & Innovation</p>
+                    <h3 className="font-semibold text-foreground">Techspire College</h3>
+                    <p className="text-muted-foreground italic">Affiliated with Asia Pacific University (APU)</p>
+                    <p className="text-muted-foreground">Bachelor of Science in Information Technology (BSc IT)</p>
                   </div>
                   <div className="text-right text-sm text-muted-foreground">
-                    <p>Sep 2024</p>
+                    <p>Kathmandu, Nepal</p>
+                    <p>Kuala Lumpur, Malaysia</p>
+                    <p>Expected 2027</p>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="font-semibold text-foreground">+2 in Science</h3>
-                    <p className="text-muted-foreground">Trinity International College</p>
-                  </div>
-                  <div className="text-right text-sm text-muted-foreground">
-                    <p>Mar 2022</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <Separator className="print:border-gray-300" />
-
-          {/* Experience */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">RELEVANT EXPERIENCE</h2>
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="font-semibold text-foreground">Computer Tutor</h3>
-                    <p className="text-muted-foreground">HopeNepal</p>
-                  </div>
-                  <p className="text-sm text-muted-foreground">December 2024 to April 2025</p>
-                </div>
-                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Assisted in developing learning resources and delivered tutorial sessions</li>
-                  <li>Fostered collaborative learning and technical understanding among students</li>
-                </ul>
               </div>
             </div>
           </section>
@@ -159,102 +111,80 @@ export default function ResumePage() {
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-foreground">MCP Server & Client Architecture</h3>
-                  <p className="text-sm text-muted-foreground">2025</p>
+                  <div>
+                    <h3 className="font-semibold text-foreground">ETL-ELT Pipeline</h3>
+                    <p className="text-xs text-accent font-medium">Python, APIs, Data Transformation</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">2026</p>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Built fully functional Model Context Protocol server and client in Python</li>
-                  <li>Implemented extensible plugin system for AI-powered applications</li>
+                  <li>Built an end-to-end data pipeline from source extraction to transformed, end-user-ready outputs</li>
+                  <li>Extracted data via API calls, transformed raw records into structured datasets</li>
+                  <li>Connected ingestion, transformation, and delivery steps into one reproducible workflow</li>
+                  <li>Applied data cleaning and transformation logic to improve consistency and analysis readiness</li>
                 </ul>
-                <div className="mt-2">
-                  <span className="text-xs text-accent font-medium">Tools: Python, MCP, FastAPI</span>
-                </div>
               </div>
 
               <div>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-foreground">AI & Data Science News Bot</h3>
-                  <p className="text-sm text-muted-foreground">2025</p>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Model Context Protocol (MCP)</h3>
+                    <p className="text-xs text-accent font-medium">Python, Client-Server Architecture</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">2026</p>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Created automated Telegram bot delivering daily AI research digests</li>
-                  <li>Integrated 9+ sources including Google AI, OpenAI, arXiv, DeepMind</li>
+                  <li>Developed an MCP-based workflow to integrate multiple tools through a unified server-client architecture</li>
+                  <li>Built a centralized server layer that coordinated tools and resources through a single integration point</li>
+                  <li>Organized client communication, configuration, and modular Python components for faster, scalable workflow</li>
+                  <li>Demonstrated practical understanding of protocol-driven systems and modular design</li>
                 </ul>
-                <div className="mt-2">
-                  <span className="text-xs text-accent font-medium">Tools: Python, Telegram API, GitHub Actions</span>
-                </div>
               </div>
 
               <div>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-foreground">SQL Data Cleaning Pipeline</h3>
-                  <p className="text-sm text-muted-foreground">2025</p>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Customer Satisfaction Analysis</h3>
+                    <p className="text-xs text-accent font-medium">R, Data Analysis, Visualization</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">2026</p>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Documented comprehensive data cleaning processes in Jupyter notebooks</li>
-                  <li>Created reusable SQL transformation templates for data normalization</li>
+                  <li>Analyzed customer rating behavior to identify the strongest factors influencing satisfaction scores</li>
+                  <li>Evaluated rating patterns across delivery types and user segments using exploratory analysis in R</li>
+                  <li>Identified instant delivery as the delivery type associated with stronger ratings</li>
+                  <li>Found that premium users tended to provide higher ratings, highlighting a valuable customer segment</li>
                 </ul>
-                <div className="mt-2">
-                  <span className="text-xs text-accent font-medium">Tools: SQL, Jupyter Notebook, Python</span>
-                </div>
               </div>
 
               <div>
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-foreground">Students Data Analysis</h3>
-                  <p className="text-sm text-muted-foreground">2024</p>
+                  <div>
+                    <h3 className="font-semibold text-foreground">VR Fitness Game Data Cleaning & Analysis</h3>
+                    <p className="text-xs text-accent font-medium">Python, Jupyter Notebook, Data Cleaning</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground">2026</p>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Analyzed educational datasets using NumPy and Matplotlib</li>
-                  <li>Visualized data trends and generated insights to support academic planning</li>
+                  <li>Cleaned and analyzed a VR fitness game dataset to understand gameplay engagement patterns</li>
+                  <li>Performed notebook-based data cleaning and preprocessing to improve consistency</li>
+                  <li>Analyzed which games accumulated higher play hours and which titles were replayed more often</li>
+                  <li>Summarized player-behavior insights to support clearer interpretation of engagement trends</li>
                 </ul>
-                <div className="mt-2">
-                  <span className="text-xs text-accent font-medium">Tools: Python, NumPy, Matplotlib</span>
-                </div>
               </div>
             </div>
           </section>
 
           <Separator className="print:border-gray-300" />
 
-          {/* Technical Skills */}
+          {/* Skills & Activities */}
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">ADDITIONAL INFORMATION</h2>
+            <h2 className="text-2xl font-bold text-foreground print:text-xl">SKILLS & ACTIVITIES</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Programming Skills</h3>
+                <h3 className="font-semibold text-foreground mb-2">Technical Skills</h3>
                 <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["Python", "SQL", "R"].map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Data Science & Analytics</h3>
-                <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["NumPy", "Pandas", "Matplotlib", "Data Cleaning", "EDA", "ETL/ELT"].map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Tools & Platforms</h3>
-                <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["Tableau", "Power BI", "GitHub", "Jupyter Notebook", "Excel"].map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Languages</h3>
-                <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["English", "Nepali"].map((skill) => (
+                  {["Python", "R", "SQL", "Pandas", "NumPy", "Matplotlib", "Seaborn", "PostgreSQL", "Git", "GitHub", "Jupyter Notebook", "API-based data ingestion", "ETL/ELT", "Data Cleaning", "Data Transformation"].map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
                       {skill}
                     </Badge>
@@ -264,85 +194,25 @@ export default function ResumePage() {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Soft Skills</h3>
                 <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["Analytical Thinking", "Fast Learner", "Problem-Solving", "Adaptable"].map((skill) => (
+                  {["Problem Solving", "Analytical Thinking", "Communication", "Collaboration", "Adaptability", "Attention to Detail"].map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
                       {skill}
                     </Badge>
                   ))}
                 </div>
               </div>
-            </div>
-          </section>
-
-          <Separator className="print:border-gray-300" />
-
-          {/* Certifications */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">CERTIFICATIONS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:grid-cols-1">
               <div>
-                <h3 className="font-semibold text-foreground">Associate Data Engineer</h3>
-                <p className="text-sm text-muted-foreground">DataCamp</p>
+                <h3 className="font-semibold text-foreground mb-2">Certifications & Training</h3>
+                <p className="text-sm text-muted-foreground">
+                  Associate Data Engineer — DataCamp; GitHub Foundation — DataCamp; Become a Python Master — Programiz; 
+                  Python Numpy for Data Science — Programiz; Learn SQL Basics — Programiz; 
+                  Uncertainty Quantification in Deep Learning — PIE & AI Kathmandu
+                </p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Become a Python Master</h3>
-                <p className="text-sm text-muted-foreground">Programiz</p>
+                <h3 className="font-semibold text-foreground mb-2">Activities</h3>
+                <p className="text-sm text-muted-foreground">Career Conclave 2025 — Volunteer</p>
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground">Python NumPy for Data Science</h3>
-                <p className="text-sm text-muted-foreground">Programiz</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">GitHub Foundation</h3>
-                <p className="text-sm text-muted-foreground">DataCamp</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">SQL Basics</h3>
-                <p className="text-sm text-muted-foreground">Programiz</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">Python Intermediate</h3>
-                <p className="text-sm text-muted-foreground">Programiz</p>
-              </div>
-            </div>
-          </section>
-
-          <Separator className="print:border-gray-300" />
-
-          {/* Volunteer Experience */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">VOLUNTEER EXPERIENCE</h2>
-            <div className="space-y-2">
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-foreground">InnovateEXPO</h3>
-                <p className="text-sm text-muted-foreground">July 2024</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-foreground">Career Conclave 2024</h3>
-                <p className="text-sm text-muted-foreground">August 2024</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-foreground">9th Management & IT Education Fair 2024</h3>
-                <p className="text-sm text-muted-foreground">August 2024</p>
-              </div>
-            </div>
-          </section>
-
-          <Separator className="print:border-gray-300" />
-
-          {/* Reference */}
-          <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground print:text-xl">REFERENCE</h2>
-            <div>
-              <h3 className="font-semibold text-foreground">Diwas Rathod</h3>
-              <p className="text-muted-foreground">Program Director at Hope Nepal</p>
-              <p className="text-sm text-muted-foreground">Phone: +977 9823619287</p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Diwas was my mentor during a computer training program after my 10th class. Under his guidance, I built
-                a strong foundation in computer science, which led to his hiring me as a part- time Computer Tutor at
-                Shree Balbodh Secondary School. His mentorship and leadership have been pivotal in my professional
-                growth and development.
-              </p>
             </div>
           </section>
         </div>
