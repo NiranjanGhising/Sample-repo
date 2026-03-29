@@ -1,12 +1,11 @@
-import { Hero } from "@/components/hero"
-import { Navigation } from "@/components/navigation"
-import { ProofStrip } from "@/components/proof-strip"
+import { HeroSection } from "@/components/hero-section"
+import { AboutSection } from "@/components/about-section-new"
+import { ProjectsSection } from "@/components/projects-section"
 import { SkillsSection } from "@/components/skills-section"
-import { FeaturedProjects } from "@/components/featured-projects"
-import { MiniDashboard } from "@/components/mini-dashboard"
-import { TestimonialsSection } from "@/components/testimonials-section"
+import { CertificationsSection } from "@/components/certifications-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
+import { Navigation } from "@/components/navigation"
 
 export default function HomePage() {
   return (
@@ -16,12 +15,11 @@ export default function HomePage() {
       </a>
       <Navigation />
       <main id="main" className="bg-background">
-        <Hero />
-        <ProofStrip />
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
         <SkillsSection />
-        <FeaturedProjects />
-        <MiniDashboard />
-        <TestimonialsSection />
+        <CertificationsSection />
         <CTASection />
       </main>
       <Footer />

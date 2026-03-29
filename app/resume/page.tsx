@@ -159,6 +159,48 @@ export default function ResumePage() {
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-semibold text-foreground">MCP Server & Client Architecture</h3>
+                  <p className="text-sm text-muted-foreground">2025</p>
+                </div>
+                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
+                  <li>Built fully functional Model Context Protocol server and client in Python</li>
+                  <li>Implemented extensible plugin system for AI-powered applications</li>
+                </ul>
+                <div className="mt-2">
+                  <span className="text-xs text-accent font-medium">Tools: Python, MCP, FastAPI</span>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-semibold text-foreground">AI & Data Science News Bot</h3>
+                  <p className="text-sm text-muted-foreground">2025</p>
+                </div>
+                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
+                  <li>Created automated Telegram bot delivering daily AI research digests</li>
+                  <li>Integrated 9+ sources including Google AI, OpenAI, arXiv, DeepMind</li>
+                </ul>
+                <div className="mt-2">
+                  <span className="text-xs text-accent font-medium">Tools: Python, Telegram API, GitHub Actions</span>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-semibold text-foreground">SQL Data Cleaning Pipeline</h3>
+                  <p className="text-sm text-muted-foreground">2025</p>
+                </div>
+                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
+                  <li>Documented comprehensive data cleaning processes in Jupyter notebooks</li>
+                  <li>Created reusable SQL transformation templates for data normalization</li>
+                </ul>
+                <div className="mt-2">
+                  <span className="text-xs text-accent font-medium">Tools: SQL, Jupyter Notebook, Python</span>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-start mb-2">
                   <h3 className="font-semibold text-foreground">Students Data Analysis</h3>
                   <p className="text-sm text-muted-foreground">2024</p>
                 </div>
@@ -168,20 +210,6 @@ export default function ResumePage() {
                 </ul>
                 <div className="mt-2">
                   <span className="text-xs text-accent font-medium">Tools: Python, NumPy, Matplotlib</span>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-semibold text-foreground">Netflix 1990s Movie Analysis</h3>
-                  <p className="text-sm text-muted-foreground">2024</p>
-                </div>
-                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
-                  <li>Analyzed Netflix movie dataset in Python, exploring trends in durations and release years</li>
-                  <li>Created visualizations (histograms) to summarize movie duration distribution using matplotlib</li>
-                </ul>
-                <div className="mt-2">
-                  <span className="text-xs text-accent font-medium">Tools: Python, Matplotlib, Pandas</span>
                 </div>
               </div>
             </div>
@@ -196,7 +224,7 @@ export default function ResumePage() {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Programming Skills</h3>
                 <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["Python", "SQL"].map((skill) => (
+                  {["Python", "SQL", "R"].map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
                       {skill}
                     </Badge>
@@ -204,9 +232,19 @@ export default function ResumePage() {
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Tools</h3>
+                <h3 className="font-semibold text-foreground mb-2">Data Science & Analytics</h3>
                 <div className="flex flex-wrap gap-2 print:gap-1">
-                  {["NumPy", "Matplotlib", "Pandas", "Excel"].map((skill) => (
+                  {["NumPy", "Pandas", "Matplotlib", "Data Cleaning", "EDA", "ETL/ELT"].map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Tools & Platforms</h3>
+                <div className="flex flex-wrap gap-2 print:gap-1">
+                  {["Tableau", "Power BI", "GitHub", "Jupyter Notebook", "Excel"].map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-xs print:bg-gray-100 print:text-gray-800">
                       {skill}
                     </Badge>
@@ -243,15 +281,27 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold text-foreground print:text-xl">CERTIFICATIONS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:grid-cols-1">
               <div>
-                <h3 className="font-semibold text-foreground">Python Programming</h3>
+                <h3 className="font-semibold text-foreground">Associate Data Engineer</h3>
+                <p className="text-sm text-muted-foreground">DataCamp</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">Become a Python Master</h3>
                 <p className="text-sm text-muted-foreground">Programiz</p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">SQL</h3>
+                <h3 className="font-semibold text-foreground">Python NumPy for Data Science</h3>
                 <p className="text-sm text-muted-foreground">Programiz</p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">NumPy for Data Science</h3>
+                <h3 className="font-semibold text-foreground">GitHub Foundation</h3>
+                <p className="text-sm text-muted-foreground">DataCamp</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">SQL Basics</h3>
+                <p className="text-sm text-muted-foreground">Programiz</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">Python Intermediate</h3>
                 <p className="text-sm text-muted-foreground">Programiz</p>
               </div>
             </div>

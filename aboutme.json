@@ -1,0 +1,399 @@
+{
+  "basics": {
+    "name": "Niranjan Ghising",
+    "headline": "Data Fellow 2025 | Data Science | AI Enthusiastic",
+    "alt_headline": "AI Enthusiastic | Data Science | Bridging Creativity and Technology",
+    "location": {
+      "city": "Kathmandu",
+      "region": "Bagmati",
+      "country": "Nepal"
+    },
+    "summary": "Data Science enthusiast with a knack for uncovering actionable insights. Passionate about machine learning, statistical analysis, and data visualization. Experienced with Python and SQL, and interested in impactful, data-driven projects.",
+    "portfolio_focus": [
+      "Data science",
+      "Data engineering fundamentals",
+      "AI tooling and experimentation",
+      "Portfolio/web development"
+    ],
+    "source_refs": ["turn11search1", "turn11search2", "turn11search3", "turn1search4", "turn1search5"]
+  },
+  "contact": {
+    "github": "https://github.com/NiranjanGhising",
+    "linkedin": "https://np.linkedin.com/in/niranjan-ghising-04500424a",
+    "website": "https://www.niranjanghising.com.np",
+    "email": null,
+    "phone": null,
+    "source_refs": ["turn11search1", "turn11search2", "turn1search5"]
+  },
+  "social_proof": {
+    "linkedin_followers": 828,
+    "linkedin_connections": "500+",
+    "github_followers": 5,
+    "github_following": 10,
+    "source_refs": ["turn11search1", "turn11search2"]
+  },
+  "education": [
+    {
+      "institution": "Asia Pacific University of Technology and Innovation (APU / APIIT)",
+      "degree": "BSc (Hons) in Information Technology",
+      "start_year": 2024,
+      "end_year": 2027,
+      "location": null,
+      "notes": "Public snippet clearly shows degree, institution, and years.",
+      "source_refs": ["turn11search2"]
+    }
+  ],
+  "experience": [
+    {
+      "organization": "Sunway Student Representative Council",
+      "role": null,
+      "location": "Kathmandu, Bagmati, Nepal",
+      "start_date": null,
+      "end_date": null,
+      "description": null,
+      "notes": "Organization is visible in the public LinkedIn snippet, but the exact role title and dates are not exposed there.",
+      "source_refs": ["turn11search2"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Become a Python Master",
+      "issuer": "Programiz",
+      "issue_date": "2025-07",
+      "credential_id": "4F44BBB91694",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Python Interview Questions",
+      "issuer": "Programiz",
+      "issue_date": "2025-07",
+      "credential_id": "32BC97826D9B",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Python Numpy for Data Science",
+      "issuer": "Programiz",
+      "issue_date": "2025-06",
+      "credential_id": "F890E9705D38",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Github Foundation",
+      "issuer": "DataCamp",
+      "issue_date": "2025-04",
+      "credential_id": null,
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Learn Python Intermediate",
+      "issuer": "Programiz",
+      "issue_date": "2025-04",
+      "credential_id": "C6B5224BA435",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Learn SQL Basics",
+      "issuer": "Programiz",
+      "issue_date": "2025-04",
+      "credential_id": "55D684D40A4B",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Practice: Python Intermediate",
+      "issuer": "Programiz",
+      "issue_date": "2025-03",
+      "credential_id": "28DA805768BB",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Uncertainty Quantification in Deep learning Model",
+      "issuer": "PIE & AI : Kathmandu",
+      "issue_date": "2025-03",
+      "credential_id": null,
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Practice Python Basic",
+      "issuer": "Programiz",
+      "issue_date": "2025-02",
+      "credential_id": "D13788ED0401",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    },
+    {
+      "name": "Python Basics",
+      "issuer": "Programiz",
+      "issue_date": "2025-01",
+      "credential_id": "376B24D12AB6",
+      "credential_url": null,
+      "source_refs": ["turn11search2"]
+    }
+  ],
+  "skills": {
+    "core": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy"
+    ],
+    "analytics_bi": [
+      "Tableau",
+      "Power BI"
+    ],
+    "additional_languages_or_tools": [
+      "R",
+      "GitHub"
+    ],
+    "web_stack_observed_in_repos": [
+      "TypeScript",
+      "CSS",
+      "JavaScript",
+      "Next.js-style project structure",
+      "Tailwind CSS"
+    ],
+    "topics_from_public_posts": [
+      "Data modeling",
+      "Data warehousing",
+      "SQL query optimization",
+      "OLAP vs OLTP",
+      "Defining grain",
+      "Data pipelines",
+      "AI collaboration for web development"
+    ],
+    "source_refs": ["turn11search1", "turn11search3", "turn11search5", "turn11search8", "turn1search4", "turn1search5"]
+  },
+  "projects": {
+    "featured": [
+      {
+        "name": "Model-Context-Protocol-MCP",
+        "slug": "model-context-protocol-mcp",
+        "repo_url": "https://github.com/NiranjanGhising/Model-Context-Protocol-MCP",
+        "description": "A Python project to build a fully functional MCP server and client.",
+        "stack": [
+          "Python",
+          "MCP",
+          "Client-server architecture"
+        ],
+        "highlights": [
+          "Includes main.py, mcp_client.py, and mcp_server.py",
+          "Configured with pyproject.toml and uv.lock",
+          "Python is the reported language"
+        ],
+        "status": "Public repository",
+        "source_refs": ["turn11search4"]
+      },
+      {
+        "name": "AI-Data_Science_News_bot",
+        "slug": "ai-data-science-news-bot",
+        "repo_url": "https://github.com/NiranjanGhising/AI-Data_Science_News_bot",
+        "description": "A Telegram-focused AI and data science research radar that sends daily digests and priority alerts using curated sources such as company research blogs and paper feeds.",
+        "stack": [
+          "Python",
+          "Telegram",
+          "GitHub Actions",
+          "Automation"
+        ],
+        "highlights": [
+          "Delivers daily digests at 08:00 Nepal time",
+          "Can send hourly priority alerts while skipping quiet hours",
+          "Uses GitHub Actions secrets for token and chat ID handling",
+          "Focuses on sources including Google AI, DeepMind, OpenAI, Microsoft Research, Meta, arXiv, Semantic Scholar, Crossref, and Papers With Code"
+        ],
+        "status": "Public repository",
+        "source_refs": ["turn11search8"]
+      },
+      {
+        "name": "Niranjan_Portfolio",
+        "slug": "niranjan-portfolio",
+        "repo_url": "https://github.com/NiranjanGhising/Niranjan_Portfolio",
+        "description": "A personal portfolio website repository.",
+        "stack": [
+          "TypeScript",
+          "CSS",
+          "JavaScript"
+        ],
+        "highlights": [
+          "Contains a CNAME file",
+          "Repository language breakdown is primarily TypeScript with CSS and JavaScript"
+        ],
+        "status": "Public repository",
+        "source_refs": ["turn11search5"]
+      },
+      {
+        "name": "Sample-repo",
+        "slug": "sample-repo",
+        "repo_url": "https://github.com/NiranjanGhising/Sample-repo",
+        "description": "A testing-purpose repository tied to a website/portfolio-style codebase.",
+        "stack": [
+          "TypeScript",
+          "CSS",
+          "JavaScript"
+        ],
+        "highlights": [
+          "Contains app, components, data, hooks, lib, public, and styles directories",
+          "Includes next.config.mjs, tailwind.config.mjs, tsconfig.json, and package.json"
+        ],
+        "status": "Public repository",
+        "source_refs": ["turn11search9"]
+      },
+      {
+        "name": "Data-Cleaning",
+        "slug": "data-cleaning",
+        "repo_url": "https://github.com/NiranjanGhising/Data-Cleaning",
+        "description": "A repository for uploading a Jupyter notebook that documents a data-cleaning process/steps.",
+        "stack": [
+          "Jupyter Notebook",
+          "SQL data cleaning"
+        ],
+        "highlights": [
+          "Contains SQL_Data_Cleaning_Process",
+          "Reported language is Jupyter Notebook"
+        ],
+        "status": "Public repository",
+        "source_refs": ["turn11search7"]
+      }
+    ],
+    "additional_or_older": [
+      {
+        "name": "Basic-Python-Projects",
+        "repo_url": "https://github.com/NiranjanGhising/Basic-Python-Projects",
+        "description": "Public Python repository shown in GitHub profile popular repositories.",
+        "source_refs": ["turn11search1"]
+      },
+      {
+        "name": "Database-Project",
+        "repo_url": "https://github.com/NiranjanGhising/Database-Project",
+        "description": "Database project repository shown in GitHub profile and search results.",
+        "source_refs": ["turn11search1", "turn11search10"]
+      },
+      {
+        "name": "Python-Intermediate-Projects",
+        "repo_url": "https://github.com/NiranjanGhising/Python-Intermediate-Projects",
+        "description": "Public Python repository shown in GitHub profile popular repositories.",
+        "source_refs": ["turn11search1"]
+      },
+      {
+        "name": "Student_Data_Analysis",
+        "repo_url": "https://github.com/NiranjanGhising/Student_Data_Analysis",
+        "description": "Public Python repository shown in GitHub profile popular repositories.",
+        "source_refs": ["turn11search1"]
+      },
+      {
+        "name": "Netflix_1900sMovie_Analysis",
+        "repo_url": "https://github.com/NiranjanGhising/Netflix_1900sMovie_Analysis",
+        "description": "Public repository shown in GitHub profile popular repositories.",
+        "source_refs": ["turn11search1"]
+      },
+      {
+        "name": "QR with Python",
+        "repo_url": null,
+        "description": "A QR code project mentioned in the profile README repository.",
+        "source_refs": ["turn11search3"]
+      },
+      {
+        "name": "TIC_TAK_TOK",
+        "repo_url": null,
+        "description": "A Tic Tac Toe game built using OOP concepts in Python, mentioned in the profile README repository.",
+        "source_refs": ["turn11search3"]
+      },
+      {
+        "name": "Rock paper scissors",
+        "repo_url": null,
+        "description": "A rock paper scissors game built using OOP concepts in Python, mentioned in the profile README repository.",
+        "source_refs": ["turn11search3"]
+      }
+    ]
+  },
+  "portfolio_sections": {
+    "hero": {
+      "title": "Niranjan Ghising",
+      "subtitle": "Data Fellow 2025 | Data Science | AI Enthusiastic",
+      "tagline_options": [
+        "AI Enthusiastic | Data Science | Bridging Creativity and Technology",
+        "Turning data into insights",
+        "Learning in public across data science, data engineering fundamentals, and AI"
+      ],
+      "cta_primary": "View Projects",
+      "cta_secondary": "Contact Me",
+      "source_refs": ["turn11search1", "turn11search3", "turn1search4"]
+    },
+    "about": {
+      "short_bio": "Data Science enthusiast focused on actionable insights, machine learning, statistical analysis, and data visualization, with hands-on work in Python and SQL.",
+      "long_bio_points": [
+        "Interested in machine learning, statistics, and visualization",
+        "Builds public projects around Python, analytics, automation, and portfolio/web experiments",
+        "Shares learning publicly around data engineering fundamentals such as data modeling, warehousing, SQL optimization, OLAP vs OLTP, and defining grain"
+      ],
+      "source_refs": ["turn11search1", "turn11search3", "turn1search4"]
+    },
+    "experience_section_title": "Experience",
+    "education_section_title": "Education",
+    "projects_section_title": "Projects",
+    "certifications_section_title": "Certifications",
+    "skills_section_title": "Skills",
+    "contact_section_title": "Contact",
+    "source_refs": ["turn11search1", "turn11search2", "turn11search3"]
+  },
+  "learning_and_interests": {
+    "current_public_learning_topics": [
+      "Data modeling",
+      "Data warehouse architecture",
+      "SQL optimization",
+      "OLAP vs OLTP",
+      "Dimensional modeling and grain",
+      "End-to-end data pipelines"
+    ],
+    "public_building_themes": [
+      "AI-assisted web development",
+      "Data and analytics projects",
+      "Automation and research aggregation",
+      "MCP/server-client experimentation"
+    ],
+    "source_refs": ["turn1search4", "turn1search5", "turn11search4", "turn11search8"]
+  },
+  "portfolio_assets_checklist": {
+    "available_now": [
+      "Name",
+      "Headline/tagline",
+      "Location",
+      "GitHub URL",
+      "LinkedIn URL",
+      "Personal website URL",
+      "Education",
+      "Public certifications",
+      "Public projects/repositories",
+      "Public learning interests"
+    ],
+    "needs_manual_fill": [
+      "Email address",
+      "Phone number",
+      "Exact experience role title at Sunway Student Representative Council",
+      "Experience dates and bullet points",
+      "Detailed descriptions and impact metrics for each project",
+      "Live demo links for projects",
+      "Certificate verification URLs",
+      "Resume/CV download link",
+      "Profile photo or avatar asset",
+      "Awards, volunteering, hackathons, speaking, or extracurricular details if any",
+      "Specific tech stack used per project where not visible publicly"
+    ],
+    "source_refs": ["turn11search1", "turn11search2", "turn11search4", "turn11search5", "turn11search7", "turn11search8"]
+  },
+  "meta": {
+    "generated_on": "2026-03-28",
+    "notes": [
+      "This JSON is compiled only from publicly visible snippets returned by web search and public GitHub result pages.",
+      "Some project repo URLs are inferred using the visible repository names under the provided GitHub account.",
+      "Where a detail was not clearly visible in the public snippet, the field is left null or placed in needs_manual_fill."
+    ],
+    "source_refs": ["turn11search1", "turn11search2", "turn11search3", "turn11search4", "turn11search5", "turn11search7", "turn11search8", "turn11search9", "turn11search10", "turn1search4", "turn1search5"]
+  }
+}

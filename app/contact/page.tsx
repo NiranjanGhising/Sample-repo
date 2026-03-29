@@ -251,7 +251,7 @@ export default function ContactPage() {
                     <div className="w-2 h-2 bg-accent rounded-full" />
                     <span className="text-sm text-muted-foreground">Open to internships and part-time roles</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">Available for projects starting January 2025</p>
+                  <p className="text-xs text-muted-foreground">Currently seeking opportunities</p>
                 </div>
               </CardContent>
             </Card>

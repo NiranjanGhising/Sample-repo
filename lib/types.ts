@@ -45,6 +45,16 @@ export interface Testimonial {
   avatar?: string
 }
 
+export interface Certification {
+  id: string
+  title: string
+  issuer: string
+  date: string
+  credentialUrl?: string
+  icon?: string
+  featured?: boolean
+}
+
 export interface SampleData {
   labels: string[]
   datasets: {
